@@ -1,0 +1,52 @@
+.reference {
+  background-color: #0A100D;
+}
+
+.reference .content {
+  /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    min-height: 50vh;
+    padding: 50px;
+    color: white; */
+  color: white;
+  column-count: 3;
+  padding: 50px;
+  min-height: 78vh;
+}
+
+.reference .content p {
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.reference .content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.reference .content em {
+  font-style: normal;
+  position: relative;
+  top: 10px;
+}
+
+@media (max-width: 800px) {
+
+
+  .reference .content {
+    /* grid-template-columns: repeat(2, 1fr); */
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+
+
+  .reference .content {
+    /* grid-template-columns: repeat(1, 1fr); */
+    column-count: 1;
+  }
+}

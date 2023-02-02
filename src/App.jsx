@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import scrollTo from "./assets/scripts/mainPage.js";
-import Reference from "../referencie/referencie.mdx";
 import header from "./assets/img/header.jpg";
+import Navigation from "./components/navigation/Navigation";
+import Kontakt from "./components/kontakt/Kontakt";
+import ReferencieSection from "./components/reference/Referencie";
+import Footer from "./components/footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -11,15 +14,7 @@ function App() {
 
   return (
     <>
-      <nav>
-        <a href="#first-segment">O mne</a>
-        <a href="#gallery">Referencie</a>
-        <a href="#email-form">Kontakt</a>
-
-        <div className="rightNavigation">
-          <p>tel: 0911123456</p>
-        </div>
-      </nav>
+      <Navigation />
 
       <div className="header">
         <img src={header} alt="landmark" />
@@ -37,20 +32,10 @@ function App() {
         </ul>
       </div>
 
-      <div className="gallery" id="gallery">
-        <div className="content">
-          <Reference />
-        </div>
-      </div>
+      <ReferencieSection />
 
-      <form className="email-form" id="email-form">
-        <h1>Kontaktujte ma</h1>
-        <label htmlFor="email">Vaša emailová adresa:</label>
-        <input type="email" id="email" name="email" required />
-        <label htmlFor="message">Správa:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Poslať email</button>
-      </form>
+      <Kontakt />
+      <Footer />
     </>
   );
 }

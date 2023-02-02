@@ -2,26 +2,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #0A100D;
-  color: #fff;
-  padding: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.2s ease;
-  margin-right: 20px;
-}
-
-nav a:hover {
-  color: #ccc;
-}
 
 .header {
   position: relative;
@@ -69,40 +49,7 @@ nav a:hover {
   margin: 0;
 }
 
-.gallery {
-  background-color: #0A100D;
-}
 
-.gallery .content {
- /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  min-height: 50vh;
-  padding: 50px;
-  color: white; */
-  color: white;
-  column-count: 3;
-  padding: 50px;
-  min-height: 78vh;
-}
-
-.gallery .content p {
-  margin: 20px;
-  text-align: center;
-  display: inline-block;
-}
-
-.gallery .content img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.gallery .content em{
-  font-style: normal;
-  position: relative;
-  top: 10px;
-}
 
 .email-form {
   display: flex;
@@ -147,20 +94,10 @@ nav a:hover {
   .header h1 {
     font-size: 10vh;
   }
-
-  .gallery .content{
-   /* grid-template-columns: repeat(2, 1fr); */
-   column-count: 2;
-  }
 }
 
 @media (max-width: 500px){
   .header h1 {
     font-size: 10vh;
-  }
-
-  .gallery .content{
-    /* grid-template-columns: repeat(1, 1fr); */
-    column-count: 1;
   }
 }
