@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && git add build && git commit -m \"Update build\" && git subtree push --prefix build origin gh-pages"
+    "deploy": "npm run build && git add dist && git commit -m \"Update build\" && git subtree push --prefix build origin gh-pages"
   },
   "dependencies": {
     "@mdx-js/react": "^2.2.1",
