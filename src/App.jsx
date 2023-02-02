@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import scrollTo from "./assets/scripts/mainPage.js";
-import Reference from "./assets/referencie/reference.mdx";
-import header from "./assets/img/header.jpg"
+import Reference from "../referencie/referencie.mdx";
+import header from "./assets/img/header.jpg";
 
 function App() {
   useEffect(() => {
     scrollTo();
   }, []);
-
-  const [content, setContent] = useState("");
-
-  // useEffect(() => {
-  //   fetch(file)
-  //     .then((res) => res.text())
-  //     .then((text) => setContent(text));
-  // }, []);
 
   return (
     <>
@@ -23,8 +15,12 @@ function App() {
         <a href="#first-segment">O mne</a>
         <a href="#gallery">Referencie</a>
         <a href="#email-form">Kontakt</a>
+
+        <div className="rightNavigation">
+          <p>tel: 0911123456</p>
+        </div>
       </nav>
-      {/* First segment: header with landmark picture, headline, and short text about me */}
+
       <div className="header">
         <img src={header} alt="landmark" />
         <h1>Hedera events</h1>
@@ -41,18 +37,12 @@ function App() {
         </ul>
       </div>
 
-      {/* Second segment: grid with pictures */}
       <div className="gallery" id="gallery">
-        <Reference/>
-        {/* <img src={require("./assets/img/galler1.jpg")} alt="picture 1" />
-        <img src={require("./assets/img/galler2.jpg")} alt="picture 2" />
-        <img src={require("./assets/img/galler3.jpg")} alt="picture 3" />
-        <img src={require("./assets/img/galler4.jpg")} alt="picture 4" />
-        <img src={require("./assets/img/galler5.jpg")} alt="picture 5" /> */}
-        {/* Add more pictures as needed */}
+        <div className="content">
+          <Reference />
+        </div>
       </div>
 
-      {/* Third segment: form to send email */}
       <form className="email-form" id="email-form">
         <h1>Kontaktujte ma</h1>
         <label htmlFor="email">Vaša emailová adresa:</label>

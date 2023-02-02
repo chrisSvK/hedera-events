@@ -71,18 +71,37 @@ nav a:hover {
 
 .gallery {
   background-color: #0A100D;
-  display: grid;
+}
+
+.gallery .content {
+ /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   min-height: 50vh;
   padding: 50px;
+  color: white; */
   color: white;
+  column-count: 3;
+  padding: 50px;
+  min-height: 78vh;
 }
 
-.gallery img {
+.gallery .content p {
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.gallery .content img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.gallery .content em{
+  font-style: normal;
+  position: relative;
+  top: 10px;
 }
 
 .email-form {
@@ -129,8 +148,9 @@ nav a:hover {
     font-size: 10vh;
   }
 
-  .gallery{
-    grid-template-columns: repeat(2, 1fr);
+  .gallery .content{
+   /* grid-template-columns: repeat(2, 1fr); */
+   column-count: 2;
   }
 }
 
@@ -139,7 +159,8 @@ nav a:hover {
     font-size: 10vh;
   }
 
-  .gallery{
-    grid-template-columns: repeat(1, 1fr);
+  .gallery .content{
+    /* grid-template-columns: repeat(1, 1fr); */
+    column-count: 1;
   }
 }
