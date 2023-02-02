@@ -1,4 +1,4 @@
-import Reference from "../../../referencie/referencie.mdx";
+import Reference from "../../referencie/referencie.mdx";
 import "./Reference.css";
 
 function ReferencieSection() {
